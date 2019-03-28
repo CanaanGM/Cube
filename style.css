@@ -1,0 +1,32 @@
+#ourCanvus{
+    background-image: url("snake.png") 
+    
+}
+
+#love{
+border: 2px solid black;
+height: auto;
+width: 600px
+}
+
+#gOver{
+    margin: auto;
+    position: absolute;
+    top: 300px;
+    left : 700px;
+    font-size: 60px;
+    text-align: center;
+    color: red;
+    display: none;
+
+}
+
+#firstDiv{
+    margin: auto ;
+    width: 600px;
+    margin-top: 200px;
+    
+}
+#h1{
+    text-align: center;
+}
