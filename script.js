@@ -19,13 +19,7 @@ $(document).ready(function() {
     var playerName = prompt("Enter thy name") ;
     $("#player1").append("<source id='playerSrc'  type='audio/mpeg'  src='/sounds/boulders,boulderdash.mp3'>")
     var playerScore ;
-    
-    // high score array contains all the high scores up to a number we'll define latooor!
-    var highScore = 48 ;
-
-    // var justArray = [] ;
-
-    
+       
     
     var loop = setInterval( movement, 100);
 
@@ -68,7 +62,7 @@ function spawnPredetor (){
 // Paint the Canvas
 
 function paintBlank () {
-    ctx.fillStyle = "white";
+    ctx.fillStyle = "wheat";
     ctx.fillRect(0,0,wed,high);
     ctx.strokeStyle = "black"
     ctx.strokeRect(0,0,wed, high);
@@ -81,7 +75,7 @@ function gameOver (){
     $("#gOver").fadeIn();
     $("#player1").last().remove()
     $("#player2").append("<source id='playerSrcc'  type='audio/mpeg'  src='/sounds/woah.mp3'>")
-    
+    $("#mena").text("Is that your best ?!? " + playerName)
    setTimeout(function(){$("#player2").last().remove()},700) // 
 
 }
@@ -108,14 +102,19 @@ function shapes (x,y, color){
 function victimaizble (){
     if(victim.x == predetor.x && victim.y == predetor.y){
         var current  = parseInt($('#over').text())
-        
          current++
          $('#over').text(current)
          counter++
+        //  $("#effect3").append("<source id='playerSrcc'  type='audio/mpeg'  src='/sounds/woah.mp3'>") 
+        //  setTimeout(function(){$("#effect3").last().remove()},700)
+        eatTime()
         spawnVictim()
      }
 }
-
+function eatTime(){
+    $("#effect3").append("<source id='playerSrcc'  type='audio/wav'  src='/sounds/Die.wav'>") 
+    setTimeout(function(){$("#effect3").last().remove()},900)
+}
 
 
 spawnVictim();

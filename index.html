@@ -6,6 +6,7 @@
     <title>Gahme</title>
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Germania+One" rel="stylesheet">
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -21,37 +22,44 @@
         <audio id="player2" autoplay hidden loop> 
                 <!-- <source id="playerSrc"  type="audio/mpeg" src="/sounds/boulders,boulderdash.mp3"> -->
             </audio>
+            <audio id="effect3" autoplay hidden>
+
+            </audio>
         
     </div>
     
-
+        <audio id="nya" hidden  >
+            <source src='/sounds/woah.mp3' type='audio/mpeg'>
+        </audio>
     
     <div id="firstDiv">
         
         <div>
             <h1 id="h1">level 100</h1>
         </div>
+ <div id="goverContainer">
         <div id="gOver">
                 LOoOoOoOSEeR !!
                 <br>
-             Is that your best ?!?<br>  <span id="finalDestination"></span>
+             <h1 id = "mena"></h1> <span id="finalDestination"></span>
              <br>
              <a class="restartTheGame" onclick="window.location.reload()" href="#">C'mon Lose Again!!</a>
              
         </div>
+    </div>
         
         <canvas id="ourCanvus" width="600" height="450" >
             change thy browseaaa!! <!--cause not all the browsers support the canus feature--> 
             
         </canvas><!-- GAME CANVUS END !!!!-->
-        <br>
+        <br> 
             <div id="love">
         <div><h1>Your Score = <span id="over">0</span> </h1> </div>
         
-        <h1 id="sss">high score: 45 </h1>
+        <h1 id="high-score">high score: 99 </h1>
     </div>
     
-    
+
         
     </div><!-- firstDiv END! -->
     
